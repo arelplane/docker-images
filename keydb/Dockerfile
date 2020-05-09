@@ -13,7 +13,7 @@ WORKDIR /downloads/RediSearch-0.19.3
 RUN ls -la
 RUN make all
 RUN ls -la ./src
-
+VOLUME [ "/data" ]
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 6379
